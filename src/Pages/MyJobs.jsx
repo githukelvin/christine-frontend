@@ -15,7 +15,7 @@ const MyJobs = () => {
 
     useEffect(() => {
         setIsLoading(true);
-        fetch(`http://localhost:5000/myJobs/wangecichristine39@gmail.com`).then(res => res.json()).then(data => {
+        fetch(`https://christine-backend.onrender.com/myJobs/wangecichristine39@gmail.com`).then(res => res.json()).then(data => {
             setJobs(data);
             setIsLoading(false);
         });
@@ -48,7 +48,7 @@ const MyJobs = () => {
     };
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/job/${id}`, { method: "DELETE" })
+        fetch(`https://christine-backend.onrender.com/job/${id}`, { method: "DELETE" })
             .then(res => res.json())
             .then(data => {
                 if (data.acknowledged === true) {

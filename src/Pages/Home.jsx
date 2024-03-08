@@ -16,7 +16,7 @@ const Home = () => {
   
   useEffect(()=> {
     setIsLoading(true);
-    fetch("http://localhost:5000/alljobs").then(res => res.json()).then(data => {
+    fetch("https://christine-backend.onrender.com/alljobs").then(res => res.json()).then(data => {
       console.log(data)
       setJobs(data);
       setIsLoading(false);

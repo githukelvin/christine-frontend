@@ -35,7 +35,7 @@ const router = createBrowserRouter([
         {
           path: "/edit-job/:id",
           element: <UpdatedJob/>,
-          loader:({params}) => fetch(`http://localhost:5000/all-jobs/${params.id}`)
+          loader:({params}) => fetch(`https://christine-backend.onrender.com/all-jobs/${params.id}`)
         },
 
       
